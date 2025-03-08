@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500&display=swap');
 
 /* Base styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    
 }
 
 /* Header */
@@ -29,9 +32,19 @@ nav {
 }
 
 nav a {
-    color: #fff;  /* White text for visibility */
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #acfcf0;
+}
+
+/* Active state for home page */
+nav a[href="index.html"] {
+    color: #acfcf0;
 }
 
 /* Mask test */
@@ -173,4 +186,158 @@ nav a {
     width: 100%;
     aspect-ratio: 1/1;  /* Square aspect ratio for album covers */
     position: relative;
+}
+
+/* Contact Section */
+.contact-section {
+    min-height: 100vh;
+    background: url('../assets/mollie\ over\ teh\ canal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    border: 2px solid rgba(172, 252, 240, 0.4);
+}
+
+.contact-image {
+    flex: 1;
+    padding: 1rem;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(172, 252, 240, 0.4);
+}
+
+.contact-info {
+    flex: 1;
+    padding: 2rem;
+}
+
+.contact-info h2 {
+    color: #acfcf0;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.2em;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #acfcf0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    transition: transform 0.3s ease;
+}
+
+.contact-link i {
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+.contact-link:hover {
+    transform: scale(1.05);
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-image {
+        width: 100%;
+    }
+
+    .contact-info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-link {
+        justify-content: center;
+    }
+}
+
+.back-to-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #acfcf0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    padding-bottom: 0;
+    background: transparent;
+    text-transform: uppercase;
+}
+
+.back-to-top i {
+    font-size: 2.5rem;
+    line-height: 0.7;
+    display: block;
+}
+
+.back-to-top i:nth-child(2) {
+    margin-top: -10px;
+}
+
+.back-to-top span {
+    margin-top: 5px;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+.back-to-top:hover i {
+    animation: bounce 1s infinite;
+}
+
+.back-to-top:hover i:nth-child(2) {
+    animation: bounce 1s infinite;
+    animation-delay: 0.1s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
 }
