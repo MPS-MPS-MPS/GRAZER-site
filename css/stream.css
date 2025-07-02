@@ -57,8 +57,8 @@ nav a[href="#catalogue"] {
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 20px;
@@ -72,7 +72,7 @@ nav a[href="#catalogue"] {
 }
 
 .profile-section h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 10px 0;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -94,20 +94,20 @@ nav a[href="#catalogue"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    max-width: 600px;
+    gap: 30px;
+    max-width: 800px;
+    padding: 0 40px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .link-button {
     width: 100%;
-    padding: 15px 30px;
+    padding: 25px 40px;
     background: rgba(0, 0, 0, 0.6);
-    border: 2px solid #acfcf0;
+    border: 3px solid #acfcf0;
     color: #acfcf0;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.2em;
     cursor: pointer;
@@ -115,16 +115,16 @@ nav a[href="#catalogue"] {
     text-decoration: none;
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 25px;
 }
 
 .link-button i {
-    font-size: 1.4rem;
-    width: 24px;
+    font-size: 2.2rem;
+    width: 36px;
     text-align: center;
 }
 
